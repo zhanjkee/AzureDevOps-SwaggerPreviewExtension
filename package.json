@@ -1,0 +1,23 @@
+{
+  "name": "openapi-preview-extension",
+  "version": "1.0.0",
+  "description": "",
+  "main": "preview.html",
+  "scripts": {
+    "package-extension": "tfx extension create --rev-version --manifest-globs OpenAPI-viewer.json",
+    "publish-extension": "tfx extension publish --manifest-globs OpenAPI-viewer.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhanjkee"
+  },
+  "author": "Zhangeldy Kalkenov",
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui": "^5.18.2",
+    "swagger-ui-dist": "^5.18.2",
+    "vss-web-extension-sdk": "^5.141.0"
+  }
+}

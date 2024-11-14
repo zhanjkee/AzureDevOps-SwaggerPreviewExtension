@@ -1,0 +1,94 @@
+{
+    "manifestVersion": 1,
+    "id": "openapi-preview-extension",
+    "version": "1.0.6",
+    "name": "OpenAPI Preview Extension",
+    "description": "Adds a button to preview OpenAPI YAML files in Azure DevOps repositories",
+    "publisher": "OpenApiPreview",
+    "public": true,
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "openapi_preview_renderer",
+            "type": "ms.vss-code-web.content-renderer",
+            "description": "Displays OpenAPI in Swagger UI",
+            "targets": [
+                "ms.vss-code-web.content-renderer-collection"
+            ],
+            "properties": {
+                "name": "OpenAPI Preview",
+                "uri": "preview.html",
+                "fileExtensions": [
+                    "yml",
+                    "yaml"
+                ],
+                "mimeTypes": [
+                    "text/yaml"
+                ],
+                "defaultBehavior": "showRenderedContent",
+                "registeredObjectId": "openapi_preview_renderer"
+            }
+        }
+    ],
+    "icons": {
+        "default": "img/icon.png"
+    },
+    "scopes": [
+        "vso.code"
+    ],
+    "categories": [
+        "Azure Repos"
+    ],
+    "tags": [
+        "OpenAPI",
+        "Swagger",
+        "YAML",
+        "preview"
+    ],    
+    "content": {
+        "details": {
+        "path": "README.md"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/zhanjkee/AzureDevOps-SwaggerPreviewExtension"
+    },
+    "files": [
+        {
+            "path": "preview.html",
+            "addressable": true
+        },      
+        {
+            "path": "spinner.css",
+            "addressable": true
+        },
+        {
+            "path": "scripts",
+            "addressable": true
+        },
+        {
+            "path": "img",
+            "addressable": true
+        },
+        {
+            "path": "node_modules/vss-web-extension-sdk/lib", 
+            "addressable": true,
+            "packagePath": "lib/vss"
+        },
+        {
+            "path": "node_modules/swagger-ui-dist", 
+            "addressable": true,
+            "packagePath": "lib/swagger-ui"
+        },
+        {
+            "path": "node_modules/js-yaml/dist", 
+            "addressable": true,
+            "packagePath": "lib/js-yaml"
+        }
+    ]
+}
